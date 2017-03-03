@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Include header template -->
+        {$template:_header}
+        <!-- Container -->
+        <main class="container">
+            {$list:pages:imgc}
+            <h1 class="grid_12" role="heading">All {$page:h1} events</h1>
+            <!-- Content box -->
+            <article class="grid_12" role="main">
+                <h3>{$header:content_header2}</h3>
+                <ul class="eventlist">
+                    {$newslist:events list:10:desc:tags:{$page:h1}}
+                </ul>
+            <h3>All events in Regions</h3>
+                <ul class="eventlist">
+                    {$newslist:events list:10:desc:tags:events-in-regions}
+                </ul>
+            </article>
+        </main>
+        <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+    </body>
+</html>

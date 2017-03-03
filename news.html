@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Include header template -->
+        {$template:_header}
+
+        <!-- Container -->
+        <main class="container">
+
+            <h1 class="grid_12" role="heading">{$page:h1}</h1>
+
+            <!-- Content box -->
+            <article class="grid_12" role="main">
+                <!-- news content -->
+                {newscontent}
+                <section>
+                    <!--<span class="event-date">
+                        {$header:date-start:static} / {$header:date-end:static}
+                    </span>
+                    <p class="event-location">
+                        {$header:location:static}
+                    </p>-->
+                    <span class="event-date">
+                        {$news:date: M d Y} / {$news:event:date: M d Y}
+                    </span>
+                    <p class="event-location">
+                        {$news:event:location}
+                    </p>
+                    
+                    <p><h2 class="event-title">Awards:</h2>
+                    {$header:awards}<br>
+                    <h2 class="event-title">Entry Fees:</h2>
+                    {$header:entry_fees}<br>
+                    <h2 class="event-title">Format:</h2>
+                    {$header:Format}<br>
+                    <h2 class="event-title">Contact Information:</h2>
+                    {$header:Contact_information}</p>
+                    
+                    {$directupload:events:image-event:750:nolink}
+                    
+                    <h2 class="event-title block">Google Map:</h2>
+                    {$header:google_map}</p>
+                    {$code:somecode}
+                    
+                </section>
+                {/newscontent}
+            </article>
+            <!-- Footer info -->
+            <!--<div class="grid_4 text-left">{$content:footer-info:static}</div>-->
+            <nav id="flat-menu" class="grid_12 text-right">
+                {$menu:flat}
+            </nav>
+        </main>
+        
+         <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+
+        <!-- Include scripts template -->
+        {$template:_scripts}
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Container -->
+        <main class="container">
+
+            <!--<h1 class="index-header text-center grid_12">{$ page:h1}</h1>-->
+
+            <!--<nav id="main-menu" class="grid_12">{ $ menu:main:_main menu}</nav>-->
+           
+           <h2 data-content="header:front_header_top">{$header:front_header_top}</h2>
+           
+            <!-- Flat Menu -->
+            <!--
+            <div data-content="content:front_content_1">{$ content:front_content_1}</div>
+            {$list:categories:imgc}-->
+            <!-- Footer info -->
+            <!--<div class="grid_12 text-left">{$ ontent:footer-info:static}</div>-->
+        </main>
+        <div id="dialog" class="dialog hide">
+            <div class="content">
+                <div class="form-block text-center">
+                    <!--<h1 class="m0px inline-block" style="position: relative">
+                        <img src="images/logo.png" alt="{$page:h1}" width="230"/>
+                        <span class="fs14 gray-dark" style="position: absolute;bottom: -10px;right: 0;letter-spacing: 2px;"></span>
+
+                    </h1>
+                    <hr>-->
+                    {$content:simplizitisoon}
+                </div>
+            </div>
+        </div>
+
+        <script>
+            $(function() {
+                $("#dialog").dialog({
+                    modal: true,
+                    width: 500,
+                    autoOpen: true
+                });
+            });
+        </script>
+    </body>
+</html>

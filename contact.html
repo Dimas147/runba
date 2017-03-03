@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Include header template -->
+        {$template:_header}
+        <!-- Container -->
+        <main class="container">
+            <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
+            
+            <!--<h1 class="grid_12" role="heading">{$ page:h1}</h1>-->
+            
+            <!-- Content box -->
+            <article class="grid_12 contact spacer mt10px" role="main">
+                <h2 class="text-center">{$header:contact1}</h2>
+                {$content:contact1}
+            </article>
+        </main>
+         <!-- Footer -->
+        <!-- Include Footer template -->
+        {$template:_footer}
+    </body>
+</html>

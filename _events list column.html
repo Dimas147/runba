@@ -1,0 +1,16 @@
+<div class="event-item column" itemscope itemtype="http://schema.org/Event">
+
+        <a class="event-item-image" href="{$news:url}">
+            <img src="{$news:preview}" alt="{$news:title}"/>
+        </a>
+        
+        <a class="event-item-title" href="{$news:url}" itemprop="url">
+            <span itemprop="name">{$news:title}</span>
+        </a>
+        
+        <span class="event-item-date">
+            <meta itemprop="startDate" content="{$news:date: M d, Y}">{$news:date: M d Y} -
+            <meta itemprop="endDate" content="{$news:event:date}">{$news:event:date: M d Y}
+        </span>
+        
+</div>

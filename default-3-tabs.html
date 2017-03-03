@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+        <!-- Container -->
+        <main class="container">
+
+            <!-- Include header template -->
+            {$template:_header}
+{$list:pages:img}
+            <h1 class="grid_12" role="heading">{$page:h1}</h1>
+
+            <!-- Content box -->
+            <div class="grid_12" role="main">
+                
+            <h2>{$header:header_top}</h2>
+             <div>{$content:content_1}</div>
+              
+            
+             <h2>{$header:header_middle}</h2>
+             <div>{$content:content_2}</div>
+             <div>{$content:general_rules:static}</div>
+             
+             
+            </div>
+
+  <!-- Footer info -->
+    <div class="grid_12 text-left">{$content:footer-info:static}</div>
+
+        </main>
+
+    </body>
+</html>

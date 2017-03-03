@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+        <!-- Container -->
+        <main class="container">
+
+            <h1 class="index-header text-center grid_12">{$page:h1}</h1>
+
+            <!--<nav id="main-menu" class="grid_12">{ $ menu:main:_main menu}</nav>-->
+            <nav id="main-menu" class="grid_12">{$list:categories:imgc}</nav>
+            
+            {$featuredonly:front}
+
+            <!-- Flat Menu -->
+            <!--<h2 data-content="header:front_header_top">{$ header:front_header_top}</h2>
+            <div data-content="content:front_content_1">{$ content:front_content_1}</div>
+            {$list:categories:imgc}-->
+            <!-- Footer info -->
+            <!--<div class="grid_12 text-left">{$ ontent:footer-info:static}</div>-->
+        </main>
+    </body>
+</html>

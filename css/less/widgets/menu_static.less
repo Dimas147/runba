@@ -1,0 +1,32 @@
+.static_menu when (@menu-static){
+    overflow : hidden;
+    & when not(@nav-color = @link-color){
+        color : @nav-color;
+    }
+
+    li{
+        padding   : 0.5em 0;
+        .inline-block();
+
+        &:hover{
+            & when not(@nav-bg = @nav-bg-li-hover){
+                background : @nav-bg-li-hover;
+            }
+            & when not(@nav-color = @nav-color-li-hover){
+                color : @nav-color-li-hover;
+            }
+        }
+
+        a{
+            display        : block;
+            padding        : 0 .5em;
+            font-weight    : 600;
+            & when not(@nav-color = @link-color){
+                color : inherit;
+            }
+
+            &.current{ }
+            span{ }
+        }
+    }
+}

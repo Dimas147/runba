@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Include head template -->
+        {$template:_head}
+    </head>
+    <body>
+
+        <!-- Container -->
+        <main class="container">
+        <h2>Index Template</h2>
+        {$header:template_index:static}
+        <hr>
+        <h2>Default Template</h2>
+        {$header:template_default:static}
+        <hr>
+        <h2>Region Template</h2>
+        {$header:template_Region:static}
+        <hr>
+        <h2>Category Template</h2>
+        {$header:template_category:static}
+        <hr>
+        <h2>Category with list of regions template</h2>
+        {$header:template_category_regions:static}
+        <hr>
+        <h2>News / Events Template</h2>
+        {$header:template_news:static}
+        <hr>
+        <h2>News / clinics Template</h2>
+        {$header:template_clinics:static}
+        <hr>
+        <h2>News / Calf Roping</h2>
+        {$header:template_Calfroping:static}
+        <hr>
+        <h2>Footer Template</h2>
+        {$header:template_footer:static}
+        <hr>
+        <h2>Favorites Template</h2>
+        {$header:template_favlist:static}
+        <hr>
+        <h2>Contact us Template</h2>
+        {$header:template_contactus:static}
+        <hr>
+        <h2>YouTube List Template</h2>
+        {$header:template_youtube-list:static}
+        <hr>
+        <h2>YouTube List Channel Template</h2>
+        {$header:template_youtube-list-channel:static}
+        <hr>
+        <h2>Category-video Template</h2>
+        {$header:template_Category-video:static}
+        <hr>
+        <h2>LiveBroadcast Template</h2>
+        {$header:template_LiveBroadcast:static}
+        <hr>
+        <h2>Banner Ads</h2>
+        {$header:bannerads:static}
+        <hr>
+        <ul>
+        {repeat:name:key:16}
+        <li>{$imageonly:bannerad_key:550:static}</li>
+        {/repeat}
+        </ul>
+        <hr>
+        <h2>Classifieds</h2>
+        {$header:template_classifieds:static}
+        <hr>
+        {$header:template_Events-by-type:static}
+        <hr>
+        {$header:template_Events-calendar:static}
+        <hr>
+        {$header:template_Video-barrels-run:static}
+        <hr>
+        </main>
+
+
+    </body>
+</html>

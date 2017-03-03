@@ -1,0 +1,21 @@
+<div class="event-item" itemscope itemtype="http://schema.org/Event">
+    <!--{$ news:actions}-->
+    <a class="event-item-title" href="{$news:url}" itemprop="url">
+        <span itemprop="name">{$news:title}</span>
+    </a>
+    <div class="wrap">
+        <a class="event-item-image grid_3" href="{$news:url}">
+            <img src="{$news:preview}" alt="{$news:title}"/>
+        </a>
+        <div class="grid_6 text-center">
+            <span class="event-item-date">
+                <meta itemprop="startDate" content="{$news:date: M d, Y}">{$news:date: M d Y} -
+                <meta itemprop="endDate" content="{$news:event:date}">{$news:event:date: M d Y}
+            </span>
+            <p class="event-item-location" itemprop="location" itemscope itemtype="http://schema.org/PostalAddress">
+                {$news:event:location}
+            </p>
+        </div>
+        <p class="event-item-description grid_3" itemprop="description">{$news:teaser}</p>
+    </div>    
+</div>
