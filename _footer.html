@@ -1,5 +1,16 @@
-<hr class="separator"/>
-<footer class="container text-center">
-    <img src="{$plugin:widcard:bizLogo:url}" alt="{$page:h1}" width="288" height="72">
+<footer>
+    <div class="container">
+        <nav id="footer-menu" class="grid_12 alpha omega">
+            {$menu:main:_footer menu}
+        </nav>
+        <p class="grid_8 alpha contact-info">
+            <a class="icon-mail" href="mailto:{$plugin:widcard:BizEmail:notag}">{$plugin:widcard:BizEmail:notag} mail will be here</a>
+            <a class="icon-phone" href="tel:{$plugin:widcard:BizTelephone:notag}">{$plugin:widcard:BizTelephone:notag} phone will be here</a>
+            <span class="icon-location"> Location will be here</span>
+        </p>
+        <p class="grid_4 omega text-right">
+            Copyright 2017
+        </p>
+    </div>
 </footer>
 {$template:_social links}

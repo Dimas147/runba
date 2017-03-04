@@ -7,7 +7,7 @@
 	.slide-description{
 		padding : @padding-large-vertical @padding-large-horizontal;
 		color   : #ffffff;
-		.rgba(#000000; 0.5);
+		.rgba(#000000; 50%);
 	}
 
 	img{
@@ -23,12 +23,19 @@
 }
 
 .cycle-slideshow when (@widget-rotator){
+	position: relative;
 	margin-bottom : 2em;
+	overflow: hidden;
+	min-height: 20px;
 
-	> .generator-links{
-		position : relative;
+	& > .generator-links{
+		position : absolute;
 		z-index  : 21;
+		right: 10px;
+		top: 10px;
+		background: @primary-color;
 	}
+
 
 	.slide{
 		position   : absolute;
@@ -43,6 +50,9 @@
 			top      : 10px;
 			left     : 10px;
 		}
+		& > img{
+			width: 100%;
+		}
 	}
 	.slide-description{
 		position  : absolute;
@@ -51,7 +61,7 @@
 		padding   : 1em;
 		font-size : 1.25em;
 		color     : #ffffff;
-		.rgba(@brand-primary; 0.5);
+		.rgba(@brand-primary; 50%);
 		p{
 			margin-bottom : 0;
 		}

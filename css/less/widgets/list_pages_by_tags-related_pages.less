@@ -97,7 +97,7 @@
 	&.Menu{
 		li{
 			display       : block;
-			margin-bottom : 0.5em;
+			margin-bottom : 2.15em;
 			width         : 100%;
 			margin-left   : 0;
 		}
@@ -116,7 +116,7 @@
 			font-size      : 2em;
 			font-family    : @font-family-headings;
 			color          : #ffffff;
-			.rgba(#000000; 0.5);
+			.rgba(#000000; 50%);
 			text-align     : left;
 			line-height    : 1.5em;
 
@@ -217,7 +217,7 @@
 	list-style : none;
 	.inline-block-wrap(top);
 	li{
-		.grid-elements(4; @grid-margin-width; false; 2; 1);
+		.grid-elements(4; @grid-margin-width; true; 2; 1);
 		margin-bottom : 1em;
 	}
 	.feed-teaser-image{
@@ -236,9 +236,10 @@
 	}
 	.feed-description{
 		overflow : hidden;
+		text-align: justify;
 	}
 	.feed-price{
-		float       : right;
+		float       : left;
 		font-weight : bold;
 		font-size   : 1.25em;
 	}

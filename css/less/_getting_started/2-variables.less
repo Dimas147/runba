@@ -79,7 +79,7 @@
 
 // Brand Color
 //==================================================
-@brand-primary : #392347; // #5d87af
+@brand-primary : #7f3f98; // #5d87af | #392347
 @brand-success : #8fd400; // #52ff8c | #A4F14E
 @brand-info    : #00a1f1; // #94C5FF
 @brand-warning : #ffbb00; // #ffd17b | #FADA32
@@ -138,7 +138,7 @@
 @text-select-color        : @primary-color;
 
 // variables for Header
-@header-bg                : transparent;
+@header-bg                : @primary-color;
 @header-color             : @text-color;
 
 // variables for Main Menu
@@ -164,8 +164,8 @@
 @content-color            : @text-color;
 
 // variables for Footer
-@footer-bg                : transparent;
-@footer-color             : @text-color;
+@footer-bg                : #333;
+@footer-color             : @primary-color;
 @footer-heading-color     : @heading-color;
 
 // [Links]
@@ -434,6 +434,10 @@
 //=============================================================
 @progressbar-bg    : #f5f5f5;
 @progressbar-value : @brand-primary;
+
+// [Parallax]
+//==================================================
+@parallax-height : 600px;
 
 // Mixin
 //==================================================

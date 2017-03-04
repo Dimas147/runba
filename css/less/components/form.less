@@ -8,228 +8,228 @@
 
 //	Custom style
 //==================================================
-form{
-	padding    : 0 1em;
-	.clearfix-mixin();
-	text-align : center;
+form {
+    padding: 0 1em;
+    .clearfix-mixin();
+    text-align: center;
 
-	fieldset{
+    fieldset {
 
-		&.unstyled{
-			padding : 0;
-			border  : 0;
+        &.unstyled {
+            padding: 0;
+            border: 0;
 
-			legend{
-				width         : 100%;
-				padding       : 0;
-				margin-bottom : 1em;
-				font-weight   : @heading-weight;
-			}
-		}
+            legend {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 1em;
+                font-weight: @heading-weight;
+            }
+        }
 
-		legend{
-			font-size : @font-size-large;
-		}
-	}
+        legend {
+            font-size: @font-size-large;
+        }
+    }
 
-	p{
-		.clearfix-mixin();
-	}
+    p {
+        .clearfix-mixin();
+    }
 
-	// -- Recaptcha & Captcha style
-	.captcha when (@seotoaster){
+    // -- Recaptcha & Captcha style
+    .captcha when (@seotoaster) {
 
-		.captcha_image{
-			width         : 65% !important;
-			height        : auto !important;
-			float         : left;
-			text-align    : center;
-			padding-right : 10px;
+        .captcha_image {
+            width: 65% !important;
+            height: auto !important;
+            float: left;
+            text-align: center;
+            padding-right: 10px;
 
-			aside &{
-				width : 100% !important;
-			}
-		}
+            aside & {
+                width: 100% !important;
+            }
+        }
 
-		label, input{
-			float       : left;
-			width       : 35%;
-			font-weight : normal;
-			font-size   : @font-size-small;
+        label, input {
+            float: left;
+            width: 35%;
+            font-weight: normal;
+            font-size: @font-size-small;
 
-			aside &{
-				width : 100%;
-			}
-		}
+            aside & {
+                width: 100%;
+            }
+        }
 
-		.recaptcha_links{
-			clear       : both;
-			font-size   : @font-size-small;
-			padding-top : 1em;
+        .recaptcha_links {
+            clear: both;
+            font-size: @font-size-small;
+            padding-top: 1em;
 
-			a + a{
-				border-left  : 1px solid @gray;
-				padding-left : 1em;
-				margin-left  : 1em;
-			}
-		}
-	}
+            a + a {
+                border-left: 1px solid @gray;
+                padding-left: 1em;
+                margin-left: 1em;
+            }
+        }
+    }
 
-	// -- Buttons
-	[type="submit"]{
-		//float : right;
-		//.inline-block();
-		width : 100%;
+    // -- Buttons
+    [type="submit"] {
+        //float : right;
+        //.inline-block();
+        width: 100%;
 
-		&:hover{
-		}
-	}
+        &:hover {
+        }
+    }
 }
 
-label, .label{
-	display       : block;
-	margin-bottom : 0.25em;
+label, .label {
+    display: block;
+    margin-bottom: 0.25em;
 
-	&[for]{
-		cursor : pointer;
-	}
+    &[for] {
+        cursor: pointer;
+    }
 
-	&[class*="grid_"]{
-		margin-bottom : 0;
-	}
+    &[class*="grid_"] {
+        margin-bottom: 0;
+    }
 
-	.label-inline &{
-		margin-bottom : 0;
-		line-height   : unit(@button-line-height * 2, em);
-	}
+    .label-inline & {
+        margin-bottom: 0;
+        line-height: unit(@button-line-height * 2, em);
+    }
 
-	&.required:after{
-		color   : @brand-error;
-		content : ' *';
-	}
+    &.required:after {
+        color: @brand-error;
+        content: ' *';
+    }
 }
 
-.notvalid{
-	color : @brand-error !important;
+.notvalid {
+    color: @brand-error !important;
 }
 
-select, textarea, input{
-	font-size        : 1.55em;
-	font-weight      : 300;
-	font-family      : @font-family-text;
-	text-align       : left;
-	border-width     : @input-border-width;
-	border-style     : solid;
-	border-color     : @input-border-color;
-	background-color : @input-bg;
-	color            : @input-color;
-	.border-radius(@input-border-radius);
-	.box-shadow(1px 1px 3px @gray-light inset, @input-inner-shadow);
-	& when (@button-transition){
-		.transition(all; 0.3s);
-	}
+select, textarea, input {
+    font-size: 1.55em;
+    font-weight: 300;
+    font-family: @font-family-text;
+    text-align: left;
+    border-width: @input-border-width;
+    border-style: solid;
+    border-color: @input-border-color;
+    background-color: @input-bg;
+    color: @input-color;
+    .border-radius(@input-border-radius);
+    .box-shadow(1px 1px 3px @gray-light inset, @input-inner-shadow);
+    & when (@button-transition) {
+        .transition(all; 0.3s);
+    }
 
-	//&:focus:not([type="submit"]):not([type="button"]){
-	&:focus{
-		& when not(@input-bg-focus = @input-bg){
-			background : @input-bg-focus;
-		}
-		& when not(@input-border-color-focus = @input-border-color){
-			border-color : @input-border-color-focus;
-		}
-		.box-shadow(0 0 @input-shadow-size @input-border-color-focus; @input-shadow-focus);
-	}
+    //&:focus:not([type="submit"]):not([type="button"]){
+    &:focus {
+        & when not(@input-bg-focus = @input-bg) {
+            background: @input-bg-focus;
+        }
+        & when not(@input-border-color-focus = @input-border-color) {
+            border-color: @input-border-color-focus;
+        }
+        .box-shadow(0 0 @input-shadow-size @input-border-color-focus; @input-shadow-focus);
+    }
 
-	&.success, &.warning, &.error, &.info{
-		& when (@form-colors){
-			color : @input-color;
-		}
-	}
-	&.success when (@form-color-success) and (@form-colors){
-		border-color : @brand-success;
-		&:focus{
-			.box-shadow(0 0 @input-shadow-size @brand-success; @input-shadow-focus);
-		}
-	}
-	&.warning when (@form-color-warning) and (@form-colors){
-		border-color : @brand-warning;
-		&:focus{
-			.box-shadow(0 0 @input-shadow-size @brand-warning; @input-shadow-focus);
-		}
-	}
-	&.error, &.notvalid{
-		& when (@form-color-error) and (@form-colors){
-			border-color : @brand-error;
-			&:focus{
-				.box-shadow(0 0 @input-shadow-size @brand-error; @input-shadow-focus);
-			}
-		}
-	}
-	&.info when (@form-color-info) and (@form-colors){
-		border-color : @brand-info;
-		&:focus{
-			.box-shadow(0 0 @input-shadow-size @brand-info; @input-shadow-focus);
-		}
-	}
+    &.success, &.warning, &.error, &.info {
+        & when (@form-colors) {
+            color: @input-color;
+        }
+    }
+    &.success when (@form-color-success) and (@form-colors){
+        border-color: @brand-success;
+        &:focus {
+            .box-shadow(0 0 @input-shadow-size @brand-success; @input-shadow-focus);
+        }
+    }
+    &.warning when (@form-color-warning) and (@form-colors){
+        border-color: @brand-warning;
+        &:focus {
+            .box-shadow(0 0 @input-shadow-size @brand-warning; @input-shadow-focus);
+        }
+    }
+    &.error, &.notvalid {
+        & when (@form-color-error) and (@form-colors){
+            border-color: @brand-error;
+            &:focus {
+                .box-shadow(0 0 @input-shadow-size @brand-error; @input-shadow-focus);
+            }
+        }
+    }
+    &.info when (@form-color-info) and (@form-colors){
+        border-color: @brand-info;
+        &:focus {
+            .box-shadow(0 0 @input-shadow-size @brand-info; @input-shadow-focus);
+        }
+    }
 
-	&[disabled], [disabled] &, &[disabled]:focus, &.noedit, &.noedit:focus{
-		border-color : darken(@input-bg-disabled, 10%) !important;
-		background   : @input-bg-disabled !important;
-		color        : darken(@input-bg-disabled, 30%) !important;
-		.box-shadow(none) !important;
-	}
+    &[disabled], [disabled] &, &[disabled]:focus, &.noedit, &.noedit:focus {
+        border-color: darken(@input-bg-disabled, 10%) !important;
+        background: @input-bg-disabled !important;
+        color: darken(@input-bg-disabled, 30%) !important;
+        .box-shadow(none) !important;
+    }
 }
 
-input, select{
-	padding     : 0 .5em;
-	height      : unit(@button-line-height * 2, em);
-	line-height : unit(@button-line-height * 2, em) - 1;
+input, select {
+    padding: 0 .5em;
+    height: unit(@button-line-height * 2, em);
+    line-height: unit(@button-line-height * 2, em) - 1;
 }
 
-select{
-	option{
-		//        color : @text-color;
-	}
+select {
+    option {
+        //        color : @text-color;
+    }
 }
 
-textarea{
-	padding    : .5em;
-	min-height : 5em;
+textarea {
+    padding: .5em;
+    min-height: 5em;
 }
 
-& when (@seotoaster = true){
-	// TODO '.retrieveFormBlock > form + a' should be changed to '.remember-password' (php)
-	.forgot-password, .retrieveFormBlock > form + a{
-		float      : left;
-		margin-top : -(@button-height-base - @padding-base-vertical);
-	}
+& when (@seotoaster = true) {
+    // TODO '.retrieveFormBlock > form + a' should be changed to '.remember-password' (php)
+    .forgot-password, .retrieveFormBlock > form + a {
+        float: left;
+        margin-top: -(@button-height-base - @padding-base-vertical);
+    }
 }
 
-#mc-embedded-subscribe-form{
-	.mc-field-group{
-		text-align    : left;
-		margin-bottom : 1em;
+#mc-embedded-subscribe-form {
+    padding: 0;
+    .mc-field-group {
+        text-align: left;
+        margin-bottom: 1em;
 
-		float         : left;
-		position      : relative;
-		width         : 98%;
-		margin-left   : 1% !important;
-		margin-right  : 1% !important;
+        float: left;
+        position: relative;
+        width: 100%;
 
-		input{
-			height : 2em;
-		}
-		& + .mc-field-group{
-			width : 48%;
-		}
-	}
-	.clear:not(#mce-responses){
-		width         : 98%;
-		margin-left   : 1% !important;
-		margin-right  : 1% !important;
-		visibility : visible;
-		height     : auto;
-	}
+        input {
+            height: 2em;
+        }
+        & + .mc-field-group {
+            width: 49%;
+            & + .mc-field-group{
+                margin-left: 2%;
+            }
+        }
+    }
+    .clear:not(#mce-responses) {
+        width: 100%;
+        visibility: visible;
+        height: auto;
+    }
 }
 
 // -- Checkbox & Radio field style
