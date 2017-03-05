@@ -9,25 +9,25 @@
         {$template:_header}
         <!-- Container -->
         <main class="container">
-            <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
-            
-            <h1 class="grid_12" role="heading">{$page:h1}</h1>
-            <span class="btn filter">{$header:btn:static}</span>
-            <!-- Content box -->
-            <article class="grid_12 hide-list" role="main">
-                {$list:pages:imgc}
-                <!--{$ directupload:ropenow:top-image-roping:::crop-750x300:nolink}-->
-                <h3>{$header:content_header2}</h3>
-                <ul class="eventlist">
-                    {$newslist:events list:10:desc}
-                </ul>
-            </article>
-            <!-- Footer info -->
-            <!--<div class="grid_4 text-left">{$content:footer-info:static}</div>-->
-            <nav id="flat-menu" class="grid_12 text-right">
-                {$menu:flat}
-            </nav>
-           
+            <div class="box-shadow clearfix">
+                <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
+                <h1 class="grid_12" role="heading">{$page:h1}</h1>
+                <span class="btn filter">{$header:btn:static}</span>
+                <!-- Content box -->
+                <article class="grid_12 hide-list" role="main">
+                    {$list:pages:imgc}
+                    <!--{$ directupload:ropenow:top-image-roping:::crop-750x300:nolink}-->
+                    <h3>{$header:content_header2}</h3>
+                    <ul class="eventlist">
+                        {$newslist:events list:10:desc}
+                    </ul>
+                </article>
+                <!-- Footer info -->
+                <!--<div class="grid_4 text-left">{$content:footer-info:static}</div>-->
+                <nav id="flat-menu" class="grid_12 text-right">
+                    {$menu:flat}
+                </nav>
+            </div>
         </main>
          <!-- Footer -->
         <!-- Include Footer template -->

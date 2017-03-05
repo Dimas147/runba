@@ -21,7 +21,6 @@
 }
 .main_menu > li {
   position: relative;
-  padding: 0.5em 0;
   display: inline-block;
   vertical-align: middle;
 }
@@ -39,8 +38,10 @@
 }
 .main_menu a {
   display: block;
-  padding: 0 .5em;
-  font-weight: 600;
+  padding: 1em .5em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   color: inherit;
 }
 .main_menu a span {
@@ -114,12 +115,17 @@
   text-decoration: underline;
   background: transparent;
 }
+#main-menu li.cat-6,
+#footer-menu li.cat-6 {
+  display: none;
+}
 .static_menu {
   overflow: hidden;
+  position: relative;
+  z-index: 3;
   color: #fff;
 }
 .static_menu li {
-  padding: 0.5em 0;
   display: inline-block;
   vertical-align: middle;
 }
@@ -129,8 +135,10 @@
 }
 .static_menu li a {
   display: block;
-  padding: 0 .5em;
-  font-weight: 600;
+  padding: 1em .5em;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   color: inherit;
 }
 .featureapage,
@@ -189,6 +197,7 @@
   color: #ffffff;
   border-color: #7f3f98;
   background-color: #7f3f98;
+  border-radius: 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -380,6 +389,7 @@
   color: #ffffff;
   border-color: #7f3f98;
   background-color: #7f3f98;
+  border-radius: 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -522,8 +532,8 @@ aside .listxrss p {
   padding: 0.25em 0.5em;
   font-size: 1.5em;
   font-weight: 600;
-  color: #ffffff;
-  background-color: #7f3f98;
+  color: #FFFFFF;
+  background-color: #7F3F98;
 }
 .event-item > div {
   padding: 0.8em 0;
@@ -567,25 +577,38 @@ aside .listxrss p {
 }
 .event-item.column {
   margin-left: 2%;
-  margin-right: 2%;
-  width: 29.33333333%;
+  margin-right: 0;
+  width: 32%;
   display: inline-block;
   vertical-align: top;
   text-align: center;
   margin-bottom: 1em;
 }
+.event-item.column:nth-child(3n + 1) {
+  margin-left: 0;
+}
 @media only screen and (max-width: 800px) and (min-width: 481px) {
   .event-item.column {
-    width: 46%;
+    width: 49%;
+  }
+  .event-item.column:nth-child(n) {
+    margin-left: 2%;
+  }
+  .event-item.column:nth-child(2n + 1) {
+    margin-left: 0;
   }
 }
 @media only screen and (max-width: 480px) {
   .event-item.column {
-    width: 96%;
+    width: 100%;
+  }
+  .event-item.column:nth-child(1n + 1) {
+    margin-left: 0;
   }
 }
 .event-item.column .event-item-title {
   margin-bottom: 0.5em;
+  height: 72px;
 }
 .event-date {
   display: block;
@@ -611,7 +634,7 @@ aside .listxrss p {
 }
 .upcoming-events-list .event-item {
   margin-bottom: 1em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #EEEEEE;
 }
 .upcoming-events-list .event-item .event-item-title {
   display: block;

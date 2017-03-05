@@ -4,6 +4,7 @@ body {
     // custom scroll-bar
     .scroll-bar();
     background-color: #FAFAFA;
+    overflow-x: hidden;
 }
 
 main {
@@ -17,8 +18,15 @@ main {
     //top              : 0;
     //left             : 0;
     //right            : 0;
-    background-color: #333;
+    background-color: #333333;
     overflow: hidden;
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 12;
+    }
 }
 
 header {
@@ -136,6 +144,9 @@ section {
     top: 20%;
     right: 0;
     z-index: 3;
+    .btn{
+        .border-radius(5px 0 0 5px);
+    }
     li {
         .transition();
         .translate(63%, 0);
@@ -183,14 +194,19 @@ footer {
     .button-color(#FFFFFF; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
 }
 
-.contact-info{
-    a, span{
+.contact-info {
+    a, span {
         color: @primary-color;
         .inline-block();
         margin-right: 1em;
-        &::before{
+        &::before {
             .inline-block();
             margin-right: 1em;
         }
     }
+}
+
+header, .top-line{
+    position: relative;
+    z-index: 10;
 }

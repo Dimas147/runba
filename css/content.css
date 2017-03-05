@@ -2703,16 +2703,16 @@ a.inherit-color:hover {
   padding-bottom: 3.57rem;
 }
 .p-t-big {
-  padding-top: 6rem;
+  padding-top: 5rem;
 }
 .p-b-big {
-  padding-bottom: 6rem;
+  padding-bottom: 5rem;
 }
 .box-shadow {
   position: relative;
-  box-shadow: 0 0 5px #FFF;
+  box-shadow: 0 0 10px #000000;
   background: #FFF;
-  padding-top: 0.8em;
+  padding: 1.2em 0.5em;
   margin-bottom: 0.8em;
   border-radius: 0 0 3px 3px;
   border-top: none;
@@ -3205,7 +3205,7 @@ h1.index-header,
 }
 h2,
 .h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 h3,
 .h3 {
@@ -3758,6 +3758,82 @@ ul.list-step .step-title:after {
   border-right-width: .3em;
   border-left-color: transparent !important;
 }
+ul.video_list {
+  font-size: 0;
+}
+ul.video_list >* {
+  font-size: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+ul.video_list li {
+  margin-left: 2%;
+  margin-right: 0;
+  width: 18.4%;
+}
+ul.video_list li:nth-child(5n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+  ul.video_list li {
+    width: 32%;
+  }
+  ul.video_list li:nth-child(n) {
+    margin-left: 2%;
+  }
+  ul.video_list li:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  ul.video_list li {
+    width: 49%;
+  }
+  ul.video_list li:nth-child(n) {
+    margin-left: 2%;
+  }
+  ul.video_list li:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+}
+ul.video_list a {
+  display: block;
+}
+ul.video_list a img {
+  width: 100%;
+}
+ul.video_list#utubvi_thumbs li {
+  margin-left: 2%;
+  margin-right: 0;
+  width: 18.4%;
+  float: none;
+  max-width: none !important;
+}
+ul.video_list#utubvi_thumbs li:nth-child(5n + 1) {
+  margin-left: 0;
+}
+@media only screen and (max-width: 800px) and (min-width: 481px) {
+  ul.video_list#utubvi_thumbs li {
+    width: 32%;
+  }
+  ul.video_list#utubvi_thumbs li:nth-child(n) {
+    margin-left: 2%;
+  }
+  ul.video_list#utubvi_thumbs li:nth-child(3n + 1) {
+    margin-left: 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  ul.video_list#utubvi_thumbs li {
+    width: 49%;
+  }
+  ul.video_list#utubvi_thumbs li:nth-child(n) {
+    margin-left: 2%;
+  }
+  ul.video_list#utubvi_thumbs li:nth-child(2n + 1) {
+    margin-left: 0;
+  }
+}
 table {
   width: 100%;
   background-color: transparent;
@@ -3970,6 +4046,7 @@ button,
   color: #FFF;
   border-color: #3f105b;
   background-color: #7f3f98;
+  border-radius: 5px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;

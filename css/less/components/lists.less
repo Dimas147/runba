@@ -454,4 +454,23 @@ ul{
             }
         }
     }
+    &.video_list{
+        .inline-block-wrap(top);
+        li{
+            .grid-elements(5; @grid-margin-width; true; 3; 2);
+        }
+        a{
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+        &#utubvi_thumbs{
+            li{
+                .grid-elements(5; @grid-margin-width; true; 3; 2);
+                float: none;
+                max-width: none !important;
+            }
+        }
+    }
 }

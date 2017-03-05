@@ -33,34 +33,46 @@
 
 .parallax-container {
     position: relative;
-    height: auto;
     .left, .right {
-        position: absolute;
+        position: fixed;
         top: 0;
         height: 100%;
-        filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale"); /* Firefox 10+, Firefox on Android */
-        filter: gray; /* IE6-9 */
-        -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+        &::after{
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            left: 0;
+            right: 0;
+            content: "";
+            pointer-events: none;
+            background: -moz-linear-gradient(top,  rgba(255,255,255,0) 50%, rgba(127,63,152,0.8) 100%);
+            background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
+            background: linear-gradient(to bottom,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#7f3f98',GradientType=0 );
+
+        }
+        & > img{
+            display: none;
+            &[style*="position"]{
+                display: block;
+            }
+        }
+        .tpopup{
+            position: absolute;
+            top: 170px;
+            left: 50%;
+            .translate(0;-50%);
+        }
     }
     .left {
         left: 0;
+        width: calc(~"50% - 550px");
+
     }
     .right {
+        width: calc(~"50% - 550px");
         right: 0;
-        .tpopup {
-            left: auto;
-            right: 5px;
-        }
-    }
-    &::before{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        content: "";
-        pointer-events: none;
-        .gradient-vertical(top, rgba(255,255,255,0) 0%, rgba(127,63,152,1) 100%);
-        z-index: 1;
     }
 }

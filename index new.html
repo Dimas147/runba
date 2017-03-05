@@ -27,103 +27,114 @@
 <!-- top line -->
 <div class="wrap top-line">
     <div class="container">
-        <nav id="flat-menu" class="grid_4 push_8">
-            {$menu:flat}
-        </nav>
-        <nav id="main-menu" class="grid_8 alpha pull_4">
+        <nav id="main-menu" class="grid_8 alpha">
             {$menu:main:_main menu}
+        </nav>
+        <nav id="flat-menu" class="grid_4 text-right">
+            {$menu:flat}
         </nav>
     </div>
 </div>
 <!-- Container -->
+
 <div class="parallax-container clearfix">
-    <div class="grid_4 suffix_2 alpha omega left parallax take-from-widget">
+    <div class="left im">
         {$imageonly:parallax-1:original:static}
     </div>
-    <div class="grid_4 prefix_2 alpha omega right parallax take-from-widget">
+    <div class="right im">
         {$imageonly:parallax-2:original:static}
     </div>
-    <main class="container box-shadow">
-        {device:desktop}
-        <div class="cycle-slideshow d-visible grid_8"
-             data-cycle-slides=".slide"
-             data-cycle-fx="fade"
-             data-cycle-max-z="10"
-             data-cycle-pager=".cycle-pager"
-             data-cycle-timeout="7000"
-                >
-            {repeat:slider:key:2}
-            <div class="slide">
-                {$imageonly:slide_key:{$mobile:device:mobile=medium:tablet=large:desktop=620}}
-                <div class="slide-description">
-                    <span class="slider-title">{$header:slide_key}</span>
-                    {$content:slide_key}
+    <main class="container">
+        <div class="box-shadow clearfix">
+            {device:desktop}
+            <div class="cycle-slideshow d-visible grid_8"
+                 data-cycle-slides=".slide"
+                 data-cycle-fx="fade"
+                 data-cycle-max-z="10"
+                 data-cycle-pager=".cycle-pager"
+                 data-cycle-timeout="7000"
+                    >
+                {repeat:slider:key:2}
+                <div class="slide">
+                    {$imageonly:slide_key:{$mobile:device:mobile=medium:tablet=large:desktop=620}}
+                    <div class="slide-description">
+                        <span class="slider-title">{$header:slide_key}</span>
+                        {$content:slide_key}
+                    </div>
                 </div>
+                {/repeat}
+                <!-- PAGER FOR SLIDER -->
+                <div id="pager" class="cycle-pager"></div>
             </div>
-            {/repeat}
-            <!-- PAGER FOR SLIDER -->
-            <div id="pager" class="cycle-pager"></div>
-        </div>
-        {/device}
+            {/device}
 
-        <nav class="grid_4">
-            {$featuredonly:menu}
-        </nav>
-        <!-- Events -->
-        <div class="grid_6 p-b">
-            <h3 class="h2">{$header:events}</h3>
-            <ul class="upcoming-events-list">
-                {$newslist:_upcoming events:2:desc}
-            </ul>
-            {$content:events-list}
-        </div>
-        <!-- app -->
-        <div class="grid_6 p-b">
-            <h2 class="uppercase">{$header:content_header1}</h2>
-            {$content:page_content}
-            <div class="text-center">
-                {$imageonly:app-store:220}
-                {$imageonly:google-store:220}
+            <nav class="grid_4">
+                {$featuredonly:menu}
+            </nav>
+            <!-- Events -->
+            <div class="grid_6 p-b">
+                <h3 class="h2">{$header:events}</h3>
+                <ul class="upcoming-events-list">
+                    {$newslist:_upcoming events:2:desc}
+                </ul>
+                {$content:events-list}
             </div>
-            <div class="subscrube-form mt20px">{$content:subscrube-form}</div>
-        </div>
-        <!-- Classifieds -->
-        <div class="grid_10">
-            <h3 class="h2 uppercase">{$header:content_header2}</h3>
-            {$content:content_header2}
-            {$featuredonly:classifieds}
-            {$code:classifieds_feed}
-        </div>
-        <!-- banner -->
-        <div class="grid_2 text-center p-t-big">
-            {$imageonly:banner:160}
-        </div>
-        <!--<div class="grid_4 prefix_2">
-            <div class="fb-page" data-href="https://www.facebook.com/RunBarrelsNow/?fref=ts" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"  data-show-posts="false">
-                <blockquote cite="https://www.facebook.com/RunBarrelsNow/?fref=ts" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/RunBarrelsNow/?fref=ts">Run Barrels Now</a>
-                </blockquote>
+            <!-- app -->
+            <div class="grid_6 p-b">
+                <h2 class="uppercase">{$header:content_header1}</h2>
+                {$content:page_content}
+                <div class="text-center">
+                    {$imageonly:app-store:220}
+                    {$imageonly:google-store:220}
+                </div>
+                <div class="subscrube-form mt20px">{$content:subscrube-form}</div>
             </div>
-        </div>-->
-        <!--<div class="grid_4 suffix_2">
-            {$ imageonly:banner2:300}
-        </div>-->
-
+            <!-- Classifieds -->
+            <div class="grid_10">
+                <h3 class="h2 uppercase">{$header:content_header2}</h3>
+                {$content:content_header2}
+                {$featuredonly:classifieds}
+                {$code:classifieds_feed}
+            </div>
+            <!-- banner -->
+            <div class="grid_2 text-center p-t-big">
+                {$imageonly:banner:160}
+            </div>
+            <!--<div class="grid_4 prefix_2">
+                <div class="fb-page" data-href="https://www.facebook.com/RunBarrelsNow/?fref=ts" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"  data-show-posts="false">
+                    <blockquote cite="https://www.facebook.com/RunBarrelsNow/?fref=ts" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/RunBarrelsNow/?fref=ts">Run Barrels Now</a>
+                    </blockquote>
+                </div>
+            </div>-->
+            <!--<div class="grid_4 suffix_2">
+                {$ imageonly:banner2:300}
+            </div>-->
+        </div>
     </main>
 </div>
+
 <!-- Include Footer template -->
 {$template:_footer}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
+<script src="js/plugin/image-scale.js"></script>
 <script>
-    (function () {
-        if (document.getElementsByClassName('parallax').length && document.getElementsByClassName('take-from-widget').length) {
-            var i = 0, href, listWhichTake = document.getElementsByClassName('take-from-widget');
-            for (; i < listWhichTake.length; i++) {
-                href = listWhichTake[i].childNodes[1].src;
-                listWhichTake[i].style.backgroundImage = 'url(' + href + ')';
-            }
-        }
-    })();
+
+    $(function() {
+        $(".im > img").imageScale();
+    });
+
+    $( window ).resize(function() {
+        $(".im > img").imageScale();
+    });
+
+    $(window).scroll(function(){
+        var sticky = $('.top-line'),
+                scroll = $(window).scrollTop();
+
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
 </script>
 </body>
 </html>
