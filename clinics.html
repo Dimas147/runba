@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
+<head>
+    {$template:_head}
+</head>
+<body>
+<div class="parallax-container clearfix">
+    {$template:_header}
+    <main class="container">
+        <h1 class="grid_12" role="heading">{$page:h1}</h1>
 
-        <!-- Container -->
-        <main class="container">
-            <div class="box-shadow clearfix">
-                <h1 class="grid_12" role="heading">{$page:h1}</h1>
-
-                <!-- Content box -->
-                <article class="grid_12" role="main">
-                    <!-- news content -->
-                    {newscontent}
-                    <section>
-                        <!--<span class="event-date">
-                            {$header:date-start:static} / {$header:date-end:static}
-                        </span>
-                        <p class="event-location">
-                            {$header:location:static}
-                        </p>-->
+        <!-- Content box -->
+        <article class="grid_12" role="main">
+            <!-- news content -->
+            {newscontent}
+            <section>
+                <!--<span class="event-date">
+                    {$header:date-start:static} / {$header:date-end:static}
+                </span>
+                <p class="event-location">
+                    {$header:location:static}
+                </p>-->
                     <span class="event-date">
                         {$news:date: M d Y} / {$news:event:date: M d Y}
                     </span>
-                        <p class="event-location">
-                            {$news:event:location}
-                        </p>
+                <p class="event-location">
+                    {$news:event:location}
+                </p>
 
-                        <h2 class="event-title">Entry Fees:</h2>
-                        <p>{$header:entry_fees}</p>
+                <h2 class="event-title">Entry Fees:</h2>
+                <p>{$header:entry_fees}</p>
 
-                        <h2 class="event-title">Contact Information:</h2>
-                        <p>{$header:Contact_information}</p>
+                <h2 class="event-title">Contact Information:</h2>
+                <p>{$header:Contact_information}</p>
 
 
-                        {$directupload:events:image-event:750:nolink}
-                        <h2 class="event-title">Full Address:</h2>
-                        {$header:full_address}</p>
-                        <h2 class="event-title">Google Map:</h2>
-                        <p>{$header:google_map}</p>
+                {$directupload:events:image-event:750:nolink}
+                <h2 class="event-title">Full Address:</h2>
+                {$header:full_address}</p>
+                <h2 class="event-title">Google Map:</h2>
+                <p>{$header:google_map}</p>
 
-                        {$galleryonly:pg_gallery}
+                {$galleryonly:pg_gallery}
 
-                    </section>
-                    {/newscontent}
-                </article>
-                <!-- Footer info -->
-                <!--<div class="grid_4 text-left">{$content:footer-info:static}</div>-->
-                <nav id="flat-menu" class="grid_12 text-right">
-                    {$menu:flat}
-                </nav>
-            </div>
-        </main>
-
-        <!-- Include scripts template -->
-        {$template:_scripts}
-    </body>
+            </section>
+            {/newscontent}
+        </article>
+    </main>
+    <div class="left im">
+        {$imageonly:parallax-1:original:static}
+    </div>
+    <div class="right im">
+        {$imageonly:parallax-2:original:static}
+    </div>
+</div>
+{$template:_footer}
+{$template:_scripts}
+<script>
+    $(function(){
+        $('.filter').on('click', function(){
+            $('.listpages').slideToggle('fast');
+        });
+    });
+</script>
+</body>
 </html>

@@ -20,24 +20,6 @@
     </div>
 </div>
 {$template:_footer}
-<script src="js/plugin/image-scale.js"></script>
-<script>
-
-    $(function () {
-        $(".im > img").imageScale();
-    });
-
-    $(window).resize(function () {
-        $(".im > img").imageScale();
-    });
-
-    $(window).scroll(function () {
-        var sticky = $('.top-line'),
-                scroll = $(window).scrollTop();
-
-        if (scroll >= 50) sticky.addClass('fixed');
-        else sticky.removeClass('fixed');
-    });
-</script>
+{$template:_scripts}
 </body>
 </html>

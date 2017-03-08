@@ -1,3 +1,29 @@
 <!-- SCRIPTS ZONE -->
-<script src="js/scripts.min.js"></script>
-<script src="js/system/flexkit.min.js"></script>
+<script src="js/plugin/image-scale.js"></script>
+<script>
+    $(function () {
+        $(".im > img").imageScale();
+    });
+
+    $(window).resize(function () {
+        $(".im > img").imageScale();
+    });
+
+    $(window).scroll(function () {
+        var sticky = $('.top-line'),
+                scroll = $(window).scrollTop();
+
+        if (scroll >= 100){
+            sticky.addClass('fixed');
+            $('body').css("padding-top","50px");
+        }
+        else{
+            sticky.removeClass('fixed');
+            $('body').css("padding-top","0");
+        }
+    });
+
+    $(".static_menu a").each(function () {
+        $(this).attr("target", "_self");
+    });
+</script>

@@ -112,25 +112,7 @@
     </div>
 </div>
 {$template:_footer}
+{$template:_scripts}
 <script src="js/plugin/jquery.cycle2.min.js"></script>
-<script src="js/plugin/image-scale.js"></script>
-<script>
-
-    $(function () {
-        $(".im > img").imageScale();
-    });
-
-    $(window).resize(function () {
-        $(".im > img").imageScale();
-    });
-
-    $(window).scroll(function () {
-        var sticky = $('.top-line'),
-                scroll = $(window).scrollTop();
-
-        if (scroll >= 50) sticky.addClass('fixed');
-        else sticky.removeClass('fixed');
-    });
-</script>
 </body>
 </html>
