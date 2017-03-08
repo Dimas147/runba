@@ -33,26 +33,47 @@
 
 .parallax-container {
     position: relative;
+    min-height: 100%;
+    &::before{
+        display: block;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        right: 0;
+        content: "";
+        pointer-events: none;
+        background: -moz-linear-gradient(top,  rgba(255,255,255,0) 50%, rgba(127,63,152,0.8) 100%);
+        background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
+        background: linear-gradient(to bottom,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#7f3f98',GradientType=0 );
+        z-index: 1;
+    }
+    &::after{
+        display: block !important;
+        position: absolute;
+        box-shadow: 0 0 10px #000000;
+        top: 0;
+        bottom: 0;
+        height: ~'calc(100% - 134px)';
+        content: "";
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        max-width: 1100px;
+        pointer-events: none;
+        background: @primary-color;
+        z-index: 10;
+        .border-radius(0 0 3px 3px);
+    }
+
     .left, .right {
         position: fixed;
         top: 0;
         height: 100%;
-        &::after{
-            display: block;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            right: 0;
-            content: "";
-            pointer-events: none;
-            background: -moz-linear-gradient(top,  rgba(255,255,255,0) 50%, rgba(127,63,152,0.8) 100%);
-            background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
-            background: linear-gradient(to bottom,  rgba(255,255,255,0) 50%,rgba(127,63,152,0.8) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#7f3f98',GradientType=0 );
-
-        }
         & > img{
             display: none;
             &[style*="position"]{

@@ -1,28 +1,43 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-        <!-- Include header template -->
-        {$template:_header}
-        <!-- Container -->
-        <main class="container">
-            <div class="box-shadow clearfix">
-                <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
+<head>
+    {$template:_head}
+</head>
+<body>
+<div class="parallax-container clearfix">
+    {$template:_header}
+    <main class="container">
+        <article class="grid_12 contact spacer mt10px" role="main">
+            <h2 class="text-center">{$header:contact1}</h2>
+            {$content:contact1}
+        </article>
+    </main>
+    <div class="left im">
+        {$imageonly:parallax-1:original:static}
+    </div>
+    <div class="right im">
+        {$imageonly:parallax-2:original:static}
+    </div>
+</div>
+{$template:_footer}
+<script src="js/plugin/image-scale.js"></script>
+<script>
 
-                <!--<h1 class="grid_12" role="heading">{$ page:h1}</h1>-->
+    $(function () {
+        $(".im > img").imageScale();
+    });
 
-                <!-- Content box -->
-                <article class="grid_12 contact spacer mt10px" role="main">
-                    <h2 class="text-center">{$header:contact1}</h2>
-                    {$content:contact1}
-                </article>
-            </div>
-        </main>
-         <!-- Footer -->
-        <!-- Include Footer template -->
-        {$template:_footer}
-    </body>
+    $(window).resize(function () {
+        $(".im > img").imageScale();
+    });
+
+    $(window).scroll(function () {
+        var sticky = $('.top-line'),
+                scroll = $(window).scrollTop();
+
+        if (scroll >= 50) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
+</script>
+</body>
 </html>

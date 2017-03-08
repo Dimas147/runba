@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-        <!-- Include header template -->
-        {$template:_header}
-        <!-- Container -->
-        <main class="container">
+<head>
+    <!-- Include head template -->
+    {$template:_head}
+</head>
+<body>
+<!-- Include header template -->
+<div class="parallax-container clearfix">
+    {$template:_header}
+    <!-- Container -->
+    <main class="container">
+        <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
 
-            <div class="box-shadow clearfix">
-                <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
+        <!--<h1 class="grid_12" role="heading">{$ page:h1}</h1>-->
+        {$list:pages:imgc}
+        <!-- Content box -->
+        <article class="grid_12 spacer" role="main">
+            <!--<h2>{$ header:content_header}</h2>-->
 
-                <!--<h1 class="grid_12" role="heading">{$ page:h1}</h1>-->
-                {$list:pages:imgc}
-                <!-- Content box -->
-                <article class="grid_12 spacer" role="main">
-                    <!--<h2>{$ header:content_header}</h2>-->
+            {$content:page_content}
 
-                    {$content:page_content}
+            <h3>{$header:content_header2}</h3>
+            <ul class="eventlist">
+                {$newslist:events list:10:desc:tags:{$page:h1}}
+            </ul>
+        </article>
+        <!-- Footer info -->
+        <div class="grid_4 text-left">{$content:footer:static}</div>
+        <nav id="flat-menu" class="grid_12 text-right">
+            {$menu:flat}
+        </nav>
+    </main>
+    <!-- Footer -->
+    <!-- Include Footer template -->
+    <div class="left im">
+        {$imageonly:parallax-1:original:static}
+    </div>
+    <div class="right im">
+        {$imageonly:parallax-2:original:static}
+    </div>
+</div>
+{$template:_footer}
+<script src="js/plugin/image-scale.js"></script>
+<script>
 
-                    <h3>{$header:content_header2}</h3>
-                    <ul class="eventlist">
-                        {$newslist:events list:10:desc:tags:{$page:h1}}
-                    </ul>
-                </article>
-                <!-- Footer info -->
-                <div class="grid_4 text-left">{$content:footer:static}</div>
-                <nav id="flat-menu" class="grid_12 text-right">
-                    {$menu:flat}
-                </nav>
-            </div>
-           
-        </main>
-         <!-- Footer -->
-        <!-- Include Footer template -->
-        {$template:_footer}
+    $(function () {
+        $(".im > img").imageScale();
+    });
 
-    </body>
+    $(window).resize(function () {
+        $(".im > img").imageScale();
+    });
+
+    $(window).scroll(function () {
+        var sticky = $('.top-line'),
+                scroll = $(window).scrollTop();
+
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
+</script>
+</body>
 </html>
