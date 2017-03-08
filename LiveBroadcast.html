@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- Include head template -->
-        {$template:_head}
-    </head>
-    <body>
-        <!-- Include header template -->
-        {$template:_header}
-        <!-- Container -->
-        <main class="container">
-            <div class="box-shadow clearfix">
-                <!--<nav id="main-menu" class="grid_12 mt15px d-visible" role="navigation">{$ menu:main:_main menu}</nav>-->
+<head>
+    {$template:_head}
+</head>
+<body>
+<div class="parallax-container clearfix">
+    {$template:_header}
+    <main class="container">
+        {$list:pages:imgc}
+        <!-- Content box -->
+        <article class="grid_12 spacer" role="main">
+            <!--<h2>{$ header:content_header}</h2>-->
+            {$content:broadcasts}
+        </article>
+        <!-- Footer info -->
+        <div class="grid_4 text-left">{$content:footer:static}</div>
+    </main>
+    <div class="left im">
+        {$imageonly:parallax-1:original:static}
+    </div>
+    <div class="right im">
+        {$imageonly:parallax-2:original:static}
+    </div>
+</div>
+{$template:_footer}
+<script src="js/plugin/image-scale.js"></script>
+<script>
 
-                <!--<h1 class="grid_12" role="heading">{$ page:h1}</h1>-->
-                {$list:pages:imgc}
-                <!-- Content box -->
-                <article class="grid_12 spacer" role="main">
-                    <!--<h2>{$ header:content_header}</h2>-->
-                    {$content:broadcasts}
+    $(function () {
+        $(".im > img").imageScale();
+    });
 
-                </article>
-                <!-- Footer info -->
-                <div class="grid_4 text-left">{$content:footer:static}</div>
-                <nav id="flat-menu" class="grid_12 text-right">
-                    {$menu:flat}
-                </nav>
-            </div>
-        </main>
-         <!-- Footer -->
-        <!-- Include Footer template -->
-        {$template:_footer}
-        <script>// <![CDATA[
-                var app = {openInBrowser: function (url) { location.href = url;}}
-                // ]]></script>
+    $(window).resize(function () {
+        $(".im > img").imageScale();
+    });
 
-    </body>
+    $(window).scroll(function () {
+        var sticky = $('.top-line'),
+                scroll = $(window).scrollTop();
+
+        if (scroll >= 50) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+    });
+</script>
+
+<script>// <![CDATA[
+var app = {openInBrowser: function (url) { location.href = url;}}
+// ]]></script>
+</body>
 </html>

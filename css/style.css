@@ -159,11 +159,23 @@ footer {
   position: relative;
   padding-top: 4.285em;
   padding-bottom: 0.889em;
-  background: #333;
   color: #FFF;
-  z-index: 1;
   float: left;
   width: 100%;
+}
+footer::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: #333;
+  content: "";
+  z-index: 9;
+}
+footer .container {
+  position: relative;
+  z-index: 12;
 }
 .webPage-go-top {
   color: #FFFFFF;
