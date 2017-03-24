@@ -149,27 +149,27 @@
 }
 .smoke-base .dialog-buttons button {
   font-size: 12px;
-  color: #FFF;
+  color: #ffffff;
   border-color: #50b000;
   background-color: #8fd400;
 }
 .smoke-base .dialog-buttons button:hover,
 .smoke-base .dialog-buttons button:active,
 .smoke-base .dialog-buttons button.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #397d00;
   background-color: #6da100;
 }
 .smoke-base .dialog-buttons button.cancel {
   margin-right: .5em;
-  color: #FFF;
+  color: #ffffff;
   border-color: #ed1b02;
   background-color: #f65314;
 }
 .smoke-base .dialog-buttons button.cancel:hover,
 .smoke-base .dialog-buttons button.cancel:active,
 .smoke-base .dialog-buttons button.cancel.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #bb1501;
   background-color: #cf3f08;
 }
@@ -207,7 +207,7 @@
   height: 16px;
 }
 .ui-accordion:not(#cpanelul) .ui-accordion-content {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e2e2e2;
   border-top: none;
   margin-top: 0;
@@ -287,7 +287,7 @@
 }
 .ui-tabs .ui-tabs-nav li.ui-tabs-active {
   font-weight: bold;
-  background: #FFF;
+  background: #ffffff;
   position: relative;
   padding-bottom: 1px;
   margin-bottom: -1px;
@@ -307,7 +307,7 @@
   z-index: 0;
   border: 1px solid #7f3f98;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
   padding: 8px 12px;
 }
 .ui-tabs.vertical > .ui-tabs-nav {
@@ -374,7 +374,7 @@
   padding: 0;
   border-width: 25;
   border-style: solid;
-  border-color: #fff;
+  border-color: #ffffff;
   background: rgba(255, 255, 255, 0.0085);
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#02ffffff', EndColorStr='#02ffffff')";
   filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#02ffffff', EndColorStr='#02ffffff');
@@ -406,7 +406,7 @@
 .ui-dialog .ui-dialog-titlebar {
   font-size: 1.25em;
   background: transparent;
-  color: #222;
+  color: #222222;
   padding: 10px 16px;
   position: relative;
   line-height: 1.5;
@@ -428,7 +428,7 @@
   margin: auto;
   padding: 10px;
   background: transparent;
-  color: #222;
+  color: #222222;
   box-sizing: content-box;
   width: 16px;
   height: 16px;
@@ -569,8 +569,8 @@
   display: none;
   padding: 0;
   width: 210px;
-  border: 1px solid #DDD;
-  background: #fff;
+  border: 1px solid #dddddd;
+  background: #ffffff;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 .ui-datepicker .ui-datepicker-header {
@@ -651,8 +651,8 @@
 }
 .ui-datepicker .ui-datepicker-calendar tbody td {
   font-size: 0.75em;
-  border-right: 1px solid #DDD;
-  border-top: 1px solid #DDD;
+  border-right: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
   line-height: 30px;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td a,
@@ -679,7 +679,7 @@
   background: #bbbbbb;
 }
 .ui-datepicker .ui-datepicker-calendar tbody td.ui-datepicker-today a {
-  color: #FFF;
+  color: #ffffff;
   background: #7f3f98;
 }
 .ui-autocomplete {
@@ -691,7 +691,7 @@
   max-height: 672px;
   border-width: 1px;
   border-style: solid;
-  border-color: #eee;
+  border-color: #eeeeee;
   background: #edf3f7;
   color: #555555;
   list-style: none;
@@ -723,8 +723,8 @@ a[class*="tooltip-native"] {
   z-index: 9999;
   padding: 4px 8px;
   max-width: 300px;
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
 }
 .ui-tooltip .ui-tooltip-content {
   font-size: .85em;
@@ -743,28 +743,28 @@ a[class*="tooltip-native"] {
   right: 0;
   bottom: 100%;
   border-top-width: 0;
-  border-bottom-color: #000;
+  border-bottom-color: #000000;
 }
 .ui-tooltip .arrow.bottom {
   left: 0;
   right: 0;
   top: 100%;
   border-bottom-width: 0;
-  border-top-color: #000;
+  border-top-color: #000000;
 }
 .ui-tooltip .arrow.left {
   top: 0;
   bottom: 0;
   right: 100%;
   border-left-width: 0;
-  border-right-color: #000;
+  border-right-color: #000000;
 }
 .ui-tooltip .arrow.right {
   top: 0;
   bottom: 0;
   left: 100%;
   border-right-width: 0;
-  border-left-color: #000;
+  border-left-color: #000000;
 }
 .ui-tooltip.success {
   background: #e1f4bb;
@@ -855,8 +855,8 @@ a[class*="tooltip-native"] {
   line-height: 1.5;
   padding: 4px 8px;
   max-width: 300px;
-  background: #000;
-  color: #fff;
+  background: #000000;
+  color: #ffffff;
   box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
 [class*="tooltip-native"][class*="--oneLine"]:after {
@@ -895,7 +895,7 @@ a[class*="tooltip-native"] {
   bottom: 100%;
 }
 [class*="tooltip-native"][class*="--arrow"]:before {
-  border-top-color: #000;
+  border-top-color: #000000;
   border-bottom: none;
 }
 [class*="tooltip-native"]:after {
@@ -912,7 +912,7 @@ a[class*="tooltip-native"] {
   bottom: auto;
 }
 [class*="tooltip-native"][class*="--bottom"][class*="--arrow"]:before {
-  border-bottom-color: #000;
+  border-bottom-color: #000000;
   border-top: none;
 }
 [class*="tooltip-native"][class*="--bottom"]:after {
@@ -924,7 +924,7 @@ a[class*="tooltip-native"] {
   bottom: auto;
 }
 [class*="tooltip-native"][class*="--left"][class*="--arrow"]:before {
-  border-left-color: #000;
+  border-left-color: #000000;
   border-right: none;
 }
 [class*="tooltip-native"][class*="--left"]:after {
@@ -936,7 +936,7 @@ a[class*="tooltip-native"] {
   bottom: auto;
 }
 [class*="tooltip-native"][class*="--right"][class*="--arrow"]:before {
-  border-right-color: #000;
+  border-right-color: #000000;
   border-left: none;
 }
 [class*="tooltip-native"][class*="--right"]:after {
@@ -1201,7 +1201,7 @@ a[class*="tooltip-native"] {
 }
 .paginator .page.selected {
   background: #7f3f98;
-  color: #FFF;
+  color: #ffffff;
   border-color: #7f3f98;
 }
 .paginator :first-child,
@@ -1399,7 +1399,7 @@ a[class*="tooltip-native"] {
   width: 95%;
   max-width: 1100px;
   pointer-events: none;
-  background: #FFF;
+  background: #ffffff;
   z-index: 10;
   border-radius: 0 0 3px 3px;
 }

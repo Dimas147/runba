@@ -19,7 +19,7 @@ body {
 }
 header {
   text-align: center;
-  background: #FFF;
+  background: #ffffff;
   color: #555555;
 }
 header .logo {
@@ -32,7 +32,7 @@ header .logo img {
   box-shadow: none;
 }
 article {
-  background: #FFF;
+  background: #ffffff;
   color: #555555;
 }
 article section {
@@ -98,7 +98,7 @@ section {
   font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
   display: inline-block;
   vertical-align: middle;
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: #7f3f98;
   background-color: #7f3f98;
   border-radius: 5px;
@@ -115,7 +115,7 @@ section {
 .video-menu .featured a:hover,
 .video-menu .featured a:active,
 .video-menu .featured a.active {
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: #613074;
   background-color: #613074;
 }
@@ -159,7 +159,7 @@ footer {
   position: relative;
   padding-top: 4.285em;
   padding-bottom: 0.889em;
-  color: #FFF;
+  color: #ffffff;
   float: left;
   width: 100%;
 }
@@ -169,7 +169,7 @@ footer::before {
   top: 0;
   right: 0;
   bottom: 0;
-  background: #333;
+  background: #333333;
   content: "";
   z-index: 9;
 }
@@ -178,20 +178,20 @@ footer .container {
   z-index: 12;
 }
 .webPage-go-top {
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: rgba(0, 0, 0, 0.5);
   background-color: rgba(0, 0, 0, 0.5);
 }
 .webPage-go-top:hover,
 .webPage-go-top:active,
 .webPage-go-top.active {
-  color: #FFF;
+  color: #ffffff;
   border-color: #7f3f98;
   background-color: #7f3f98;
 }
 .contact-info a,
 .contact-info span {
-  color: #FFF;
+  color: #ffffff;
   display: inline-block;
   vertical-align: middle;
   margin-right: 1em;
@@ -309,7 +309,7 @@ input {
   text-align: left;
   border-width: 1px;
   border-style: solid;
-  border-color: #eee;
+  border-color: #eeeeee;
   background-color: #edf3f7;
   color: #4e616d;
   border-radius: 5px;
@@ -462,7 +462,7 @@ textarea {
   line-height: 0;
   margin: 0;
   background: #edf3f7;
-  border: 1px solid #eee;
+  border: 1px solid #eeeeee;
   color: transparent;
 }
 .filed-upgrade ~ .checkbox_radio:before {
@@ -525,7 +525,7 @@ textarea {
   content: '';
   background: #f65314;
   transition: all, 0.3s;
-  background: #eee;
+  background: #eeeeee;
   position: absolute;
   border: 1px solid #edf3f7;
   z-index: 1;
@@ -581,7 +581,7 @@ textarea {
   margin-bottom: 0;
   height: 3.1em;
   line-height: 3.1em;
-  background: #eee;
+  background: #eeeeee;
   text-align: center;
   color: #fff;
   transition: all, 0.3s;
@@ -638,7 +638,7 @@ textarea {
   position: relative;
 }
 .input-label label {
-  color: #CCC;
+  color: #cccccc;
   position: absolute;
   top: 0;
   left: .5em;
@@ -709,7 +709,7 @@ textarea {
   margin: 0;
   line-height: 1.5;
   padding: 4px;
-  color: #FFF;
+  color: #ffffff;
   text-align: center;
   font-size: 0.85em;
   white-space: nowrap;
@@ -753,7 +753,7 @@ textarea {
   z-index: 21;
   right: 10px;
   top: 10px;
-  background: #FFF;
+  background: #ffffff;
 }
 .cycle-slideshow .slide {
   position: absolute;
@@ -809,7 +809,7 @@ textarea {
   vertical-align: middle;
   cursor: pointer;
   margin: 0 3px;
-  color: #FFF;
+  color: #ffffff;
   border: 1px solid #7f3f98;
   background: #ffffff;
   border-radius: 14px;
@@ -827,12 +827,12 @@ textarea {
 .cycle-slideshow .cycle-pager > *.cycle-pager-active {
   cursor: default;
   border-color: #ffffff;
-  color: #FFF;
+  color: #ffffff;
   background: #7f3f98;
 }
 .cycle-slideshow [class*="cycle-"].action-button {
   background: #7f3f98;
-  color: #FFF;
+  color: #ffffff;
   position: absolute;
   top: 50%;
   z-index: 20;
@@ -851,7 +851,7 @@ textarea {
 }
 .cycle-slideshow [class*="cycle-"].action-button:hover {
   background: #613074;
-  color: #FFF;
+  color: #ffffff;
 }
 .cycle-slideshow [class*="cycle-"].action-button:before {
   font-family: flexkit-icons;
