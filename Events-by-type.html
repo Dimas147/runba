@@ -7,10 +7,19 @@
 <div class="parallax-container clearfix">
     {$template:_header}
     <main class="container">
-        {$list:pages:imgc}
-        <h1 class="grid_12" role="heading">All {$page:h1} events</h1>
+        <!--{_$list:pages:imgc}-->
+
         <!-- Content box -->
         <article class="grid_12" role="main">
+            <h3>{$header:content_header_1:static}</h3>
+            {$content:page_content_1:static}
+            {$featuredonly:list_1:static}
+            <h3>{$header:content_header_2:static}</h3>
+            {$content:page_content_1:static}
+            {$featuredonly:list_2:static}
+
+            <h1 role="heading">All {$page:h1} events</h1>
+
             <h3>{$header:content_header2}</h3>
             <ul class="eventlist">
                 {$newslist:events list:10:desc:tags:{$page:h1}}

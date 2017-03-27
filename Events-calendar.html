@@ -12,11 +12,19 @@
         <!-- Content box -->
         <article class="grid_12" role="main">
 
-            {repeat:list:key}
-            <h3>{$header:content_headerkey}</h3>
-            {$content:page_content_key}
-            {$featuredonly:listkey}
-            {/repeat}
+            <!--{_repeat:list:key}-->
+            <!--<h3>{_$header:content_headerkey}</h3>-->
+            <!--{_$content:page_content_key}-->
+            <!--{_$featuredonly:listkey}-->
+            <!--{_/repeat}-->
+
+            <h3>{$header:content_header_1:static}</h3>
+            {$content:page_content_1:static}
+            {$featuredonly:list_1:static}
+            <h3>{$header:content_header_2:static}</h3>
+            {$content:page_content_1:static}
+            {$featuredonly:list_2:static}
+
 
             <h1 role="heading">{$page:h1}</h1>
             {$content:page_content}

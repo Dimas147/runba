@@ -189,6 +189,11 @@ footer .container {
   border-color: #7f3f98;
   background-color: #7f3f98;
 }
+.contact-info {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  pointer-events: none;
+}
 .contact-info a,
 .contact-info span {
   color: #ffffff;
