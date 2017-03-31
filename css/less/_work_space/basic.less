@@ -1,239 +1,221 @@
 //	PAGE Style
 //==================================================
 html, body {
-    height: 100%;
+	height : 100%;
 }
-
 body {
-    // custom scroll-bar
-    .scroll-bar();
-    background-color: #FAFAFA;
-    overflow-x: hidden;
+	// custom scroll-bar
+	.scroll-bar();
+	background-color : #FAFAFA;
+	overflow-x       : hidden;
 }
-
 main {
 }
-
 //	HEADER Style
 //==================================================
 .top-line {
-    //z-index          : 25;
-    //position         : fixed;
-    //top              : 0;
-    //left             : 0;
-    //right            : 0;
-    background-color: #333333;
-    overflow: hidden;
-    &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 12;
-    }
+	//z-index          : 25;
+	//position         : fixed;
+	//top              : 0;
+	//left             : 0;
+	//right            : 0;
+	background-color : #333;
+	overflow         : hidden;
+	&.fixed {
+		position : fixed;
+		top      : 0;
+		left     : 0;
+		width    : 100%;
+		z-index  : 12;
+	}
 }
-
 header {
-    text-align: center;
-    background: @header-bg;
-    color: @header-color;
+	text-align : center;
+	background : @header-bg;
+	color      : @header-color;
 
-    // -- LOGO Style
-    .logo {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding: 0.85em 0;
+	// -- LOGO Style
+	.logo {
+		margin-top    : 0;
+		margin-bottom : 0;
+		padding       : 0.85em 0;
 
-        a {
-        }
-        img {
-            margin: 0;
-            .box-shadow(none);
-        }
-    }
+		a {
+		}
+		img {
+			margin : 0;
+			.box-shadow(none);
+		}
+	}
 
-    // -- NAV in HEADER Style
-    nav {
-    }
+	// -- NAV in HEADER Style
+	nav {
+	}
 }
-
 // -- NAV Style
 nav {
 }
-
 //	CONTENT Style
 //==================================================
 article {
-    background: @content-bg;
-    color: @content-color;
+	background : @content-bg;
+	color      : @content-color;
 
-    section {
-        margin-bottom: 0.5em;
-    }
+	section {
+		margin-bottom : 0.5em;
+	}
 }
-
 section {
-    padding: 0.5em 0;
+	padding : 0.5em 0;
 }
-
 .downloads-list {
-    a {
-        .inline-block();
-        margin: 0 0.25em 1em;
-    }
+	a {
+		.inline-block();
+		margin : 0 0.25em 1em;
+	}
 }
-
 .spacer {
-    padding: 1em 0;
+	padding : 1em 0;
 }
-
 .contact {
-    .rgba(#FFFFFF, 0.85);
+	.rgba(#FFF, 0.85);
 }
-
 // -- 404 Page Style
 .page404 {
-    padding: 1em 0 3em;
-    color: @gray-dark;
+	padding : 1em 0 3em;
+	color   : @gray-dark;
 
-    .first {
-        text-align: center;
-        font-size: 17em;
-        line-height: 1;
-    }
+	.first {
+		text-align  : center;
+		font-size   : 17em;
+		line-height : 1;
+	}
 }
-
 .filter {
-    position: absolute;
-    top: 10px;
-    right: 1%;
+	position : absolute;
+	top      : 10px;
+	right    : 1%;
 }
-
 .wbg {
-    background: url("../images/body-bg.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/body-bg.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/body-bg.jpg', sizingMethod='scale')";
+	background              : url("../images/body-bg.jpg") no-repeat center center fixed;
+	-webkit-background-size : cover;
+	-moz-background-size    : cover;
+	-o-background-size      : cover;
+	background-size         : cover;
+	filter                  : progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/body-bg.jpg', sizingMethod='scale');
+	-ms-filter              : "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/body-bg.jpg', sizingMethod='scale')";
 }
-
 .video-menu {
-    ul {
-        //.inline-block();
-    }
-    .featured {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-        li {
-            margin-bottom: 1em;
-        }
-        a {
-            margin-bottom: 0;
-            .button(#FFFFFF; @brand-primary; @brand-primary);
-            display: block;
-            font-size: 1.25em;
-        }
-    }
+	ul {
+		//.inline-block();
+	}
+	.featured {
+		list-style : none;
+		padding    : 0;
+		margin     : 0;
+		text-align : center;
+		li {
+			margin-bottom : 1em;
+		}
+		a {
+			margin-bottom : 0;
+			.button(#FFF; @brand-primary; @brand-primary);
+			display       : block;
+			font-size     : 1.25em;
+		}
+	}
+	&.border-bottom {
+		border-bottom : 1px solid #000;
+	}
 }
-
 .social-block {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    top: 25%;
-    right: 0;
-    z-index: 3;
-    .btn {
-        .border-radius(5px 0 0 5px);
-    }
-    li {
-        .transition();
-        .translate(63%, 0);
-        will-change: transform;
-        &:hover {
-            .translate(0, 0);
-        }
-    }
-    a {
-        &::before {
-            margin-right: 10px;
-        }
-    }
+	list-style : none;
+	padding    : 0;
+	margin     : 0;
+	position   : fixed;
+	top        : 25%;
+	right      : 0;
+	z-index    : 3;
+	.btn {
+		.border-radius(5px 0 0 5px);
+	}
+	li {
+		.transition();
+		.translate(63%, 0);
+		will-change : transform;
+		&:hover {
+			.translate(0, 0);
+		}
+	}
+	a {
+		&::before {
+			margin-right : 10px;
+		}
+	}
 }
-
 //	SIDEBAR Style
 //==================================================
 aside {
-    .aside-box {
-        margin-bottom: 30px;
-    }
+	.aside-box {
+		margin-bottom : 30px;
+	}
 }
-
 //	FOOTER Style
 //==================================================
 footer {
-    height: 175px;
-    margin-top: -175px;
-    position: relative;
-    padding-top: 4.285em;
-    padding-bottom: 0.889em;
-    color: @footer-color;
-    float: left;
-    width: 100%;
-    &::before{
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: @footer-bg;
-        content: "";
-        z-index: 9;
-    }
-    .container{
-        position: relative;
-        z-index: 12;
-    }
+	height         : 175px;
+	margin-top     : -175px;
+	position       : relative;
+	padding-top    : 4.285em;
+	padding-bottom : 0.889em;
+	color          : @footer-color;
+	float          : left;
+	width          : 100%;
+	&::before {
+		position   : absolute;
+		left       : 0;
+		top        : 0;
+		right      : 0;
+		bottom     : 0;
+		background : @footer-bg;
+		content    : "";
+		z-index    : 9;
+	}
+	.container {
+		position : relative;
+		z-index  : 12;
+	}
 
-    .footer-box {
-    }
+	.footer-box {
+	}
 }
-
 //	Button to scroll top
 //==================================================
 .webPage-go-top {
-    .button-color(#FFFFFF; fade(#000000, 50%); fade(#000000, 50%); @primary-color; @primary-bg; @primary-bg);
+	.button-color(#FFF; fade(#000, 50%); fade(#000, 50%); @primary-color; @primary-bg; @primary-bg);
 }
-
 .contact-info {
-    .opacity(0);
-    pointer-events: none;
-    a, span {
-        color: @primary-color;
-        .inline-block();
-        margin-right: 1em;
-        &::before {
-            .inline-block();
-            margin-right: 1em;
-        }
-    }
+	.opacity(0);
+	pointer-events : none;
+	a, span {
+		color        : @primary-color;
+		.inline-block();
+		margin-right : 1em;
+		&::before {
+			.inline-block();
+			margin-right : 1em;
+		}
+	}
 }
-
 header, .top-line {
-    position: relative;
-    z-index: 12;
+	position : relative;
+	z-index  : 12;
 }
-
 main {
-    &.container {
-        position: relative;
-        z-index: 11;
-        padding-top: 11px;
-        padding-bottom: 150px;
-    }
+	&.container {
+		position       : relative;
+		z-index        : 11;
+		padding-top    : 15px;
+		padding-bottom : 150px;
+	}
 }

@@ -152,6 +152,9 @@
   overflow: hidden;
   margin-bottom: 0.5em;
 }
+.featureditem {
+  text-align: center;
+}
 .featureditem li {
   margin-left: 2%;
   margin-right: 0;
