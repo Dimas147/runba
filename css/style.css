@@ -221,6 +221,9 @@ main.container {
   padding-top: 15px;
   padding-bottom: 150px;
 }
+.border-bottom {
+  border-bottom: 1px solid #000;
+}
 form {
   padding: 0 1em;
   text-align: center;
