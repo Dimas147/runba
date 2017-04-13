@@ -224,6 +224,30 @@ main.container {
 .border-bottom {
   border-bottom: 1px solid #000;
 }
+.equal-columns {
+  margin-bottom: 3.57rem;
+  display: table;
+}
+.equal-columns .content {
+  display: table-row;
+}
+.equal-columns .grid_6 {
+  position: relative;
+  display: table-cell;
+  float: none;
+  width: 50%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 70px;
+}
+.equal-columns .see-events,
+.equal-columns #mc-embedded-subscribe {
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  right: 2%;
+  width: 96%;
+}
 form {
   padding: 0 1em;
   text-align: center;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {$template:_head}
+</head>
+<body>
+<div class="parallax-container clearfix">
+    {$template:_header}
+    <main class="container">
+        {$list:pages:imgc}
+        <!-- Content box -->
+        <article class="grid_12 spacer" role="main">
+            <!--<h2>{$ header:content_header}</h2>-->
+            {$content:video-container}
+        </article>
+        <!-- Footer info -->
+        <div class="grid_4 text-left">{$content:footer:static}</div>
+    </main>
+    <div class="left im">
+        {$imageonly:parallax-1:original:static}
+    </div>
+    <div class="right im">
+        {$imageonly:parallax-2:original:static}
+    </div>
+</div>
+{$template:_footer}
+{$template:_scripts}
+</body>
+</html>

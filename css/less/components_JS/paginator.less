@@ -1,38 +1,39 @@
-.paginator when (@componentsJS-pagination){
-    color       : @gray-light;
-    font-size   : @font-size-small;
-    cursor      : default;
-    line-height : 1;
-    .inline-block();
+.paginator when (@componentsJS-pagination) {
+	color         : @gray-light;
+	font-size     : @font-size-small;
+	cursor        : default;
+	line-height   : 1;
+	.inline-block();
+	margin-bottom : 0.857rem;
 
-    *{
-        .inline-block;
-        border  : 1px solid @gray-light;
-        padding : @padding-small-vertical @padding-small-horizontal;
-        margin  : 0 0.1em;
+	* {
+		.inline-block;
+		border  : 1px solid @gray-light;
+		padding : @padding-small-vertical @padding-small-horizontal;
+		margin  : 0 0.1em;
 
-        &:empty{
-            display : none;
-        }
-    }
+		&:empty {
+			display : none;
+		}
+	}
 
-    .page{
-        cursor       : pointer;
-        border-color : @gray-light;
+	.page {
+		cursor       : pointer;
+		border-color : @gray-light;
 
-        &:hover{
-            background : @gray-light;
-            color      : @gray;
-        }
+		&:hover {
+			background : @gray-light;
+			color      : @gray;
+		}
 
-        &.selected{
-            background   : @primary-bg;
-            color        : @primary-color;
-            border-color : @primary-bg;
-        }
-    }
+		&.selected {
+			background   : @primary-bg;
+			color        : @primary-color;
+			border-color : @primary-bg;
+		}
+	}
 
-    :first-child, :last-child{
-        font-weight : bold;
-    }
+	:first-child, :last-child {
+		font-weight : bold;
+	}
 }

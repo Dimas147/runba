@@ -223,3 +223,28 @@ main {
 .border-bottom{
 	border-bottom: 1px solid #000;
 }
+
+.equal-columns{
+	//.flexbox(row; wrap);
+	margin-bottom: 3.57rem;
+	display: table;
+	.content{
+		display: table-row;
+	}
+	.grid_6{
+		position: relative;
+		display: table-cell;
+		float: none;
+		width: 50%;
+		padding-left: 1%;
+		padding-right: 1%;
+		padding-bottom: 70px;
+	}
+	.see-events, #mc-embedded-subscribe{
+		position: absolute;
+		bottom: 0;
+		left: 2%;
+		right: 2%;
+		width: 96%;
+	}
+}

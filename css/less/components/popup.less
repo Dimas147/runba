@@ -1,0 +1,84 @@
+// More info: http://workarounds.seotoaster.com/html.html#Pop-up
+.popup-overlay when (@popup = true) {
+	position       : fixed;
+	z-index        : 120;
+	top            : 0;
+	left           : 0;
+	right          : 0;
+	bottom         : 0;
+	opacity        : 0;
+	pointer-events : none;
+	.rgba(@gray-darker, 15);
+	.flexbox();
+	.flex-align(center);
+	.box-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+
+	&:target, &.active {
+		opacity        : 1;
+		pointer-events : initial;
+
+		._popup {
+			opacity : 1;
+		}
+	}
+
+	._popup {
+		width            : auto;
+		max-width        : 800px;
+		margin           : auto;
+		background-color : lighten(@brand-primary, 5%);
+		opacity          : 0;
+		.box-shadow(0 0 27px rgba(0, 0, 0, 0.13));
+		.transition(all 0.3s linear);
+
+		& * {
+			color : @text-color;
+		}
+	}
+
+	._header {
+		min-height : 40px;
+		padding    : 13px 15px;
+
+		&::after {
+			content : "";
+			display : table;
+			clear   : both;
+		}
+
+		._title {
+			float       : left;
+			font-size   : 14px;
+			line-height : 1;
+			color       : @gray-light;
+			font-weight : bold;
+		}
+
+		[class*="icon"] {
+			display     : block;
+			line-height : 1;
+			float       : right;
+			margin      : 0;
+			font-size   : 12px;
+			//.transition();
+			.link-color(@primary-color; @gray-darker);
+		}
+	}
+
+	._content {
+		padding    : 15px;
+		background : @primary-color;
+		& > img {
+			width : 100%;
+		}
+
+		&::after {
+			content : "";
+			display : table;
+			clear   : both;
+		}
+	}
+	[type="submit"] {
+		.button-color(@primary-color; @gray-darker);
+	}
+}

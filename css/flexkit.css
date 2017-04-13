@@ -1180,6 +1180,7 @@ a[class*="tooltip-native"] {
   line-height: 1;
   display: inline-block;
   vertical-align: middle;
+  margin-bottom: 0.857rem;
 }
 .paginator * {
   display: inline-block;

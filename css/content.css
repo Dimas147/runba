@@ -4372,9 +4372,6 @@ button.big,
   opacity: 0.5;
   filter: alpha(opacity=50);
 }
-.see-events {
-  margin-top: -2rem;
-}
 hr {
   clear: both;
   border: none;
@@ -4706,4 +4703,110 @@ hr.dotted {
 }
 .panel.collapse .collapse-btn:before {
   font-size: 16px;
+}
+.popup-overlay {
+  position: fixed;
+  z-index: 120;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  pointer-events: none;
+  background: rgba(34, 34, 34, 0.15);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#26222222', EndColorStr='#26222222')";
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#26222222', EndColorStr='#26222222');
+  zoom: 1 !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: false;
+  -ms-flex-direction: false;
+  flex-direction: false;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+.popup-overlay:target,
+.popup-overlay.active {
+  opacity: 1;
+  pointer-events: initial;
+}
+.popup-overlay:target ._popup,
+.popup-overlay.active ._popup {
+  opacity: 1;
+}
+.popup-overlay ._popup {
+  width: auto;
+  max-width: 800px;
+  margin: auto;
+  background-color: #8e46aa;
+  opacity: 0;
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.13);
+  transition: all 0.3s linear;
+}
+.popup-overlay ._popup * {
+  color: #555555;
+}
+.popup-overlay ._header {
+  min-height: 40px;
+  padding: 13px 15px;
+}
+.popup-overlay ._header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popup-overlay ._header ._title {
+  float: left;
+  font-size: 14px;
+  line-height: 1;
+  color: #bbbbbb;
+  font-weight: bold;
+}
+.popup-overlay ._header [class*="icon"] {
+  display: block;
+  line-height: 1;
+  float: right;
+  margin: 0;
+  font-size: 12px;
+  color: #ffffff;
+}
+.popup-overlay ._header [class*="icon"]:hover {
+  color: #222222;
+}
+.popup-overlay ._content {
+  padding: 15px;
+  background: #ffffff;
+}
+.popup-overlay ._content > img {
+  width: 100%;
+}
+.popup-overlay ._content::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.popup-overlay [type="submit"] {
+  color: #ffffff;
+  border-color: #050505;
+  background-color: #222222;
+}
+.popup-overlay [type="submit"]:hover,
+.popup-overlay [type="submit"]:active,
+.popup-overlay [type="submit"].active {
+  color: #ffffff;
+  border-color: #000000;
+  background-color: #090909;
 }

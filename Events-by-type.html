@@ -22,11 +22,12 @@
 
             <h3>{$header:content_header2}</h3>
             <ul class="eventlist">
-                {$newslist:events list:10:desc:tags:{$page:h1}}
+                {$newslist:events list:10:asc:tags:{$page:h1}}
             </ul>
             <h3>All events in Regions</h3>
             <ul class="eventlist">
-                {$newslist:events list:10:desc:tags:events-in-regions}
+                <!--{_$newslist:events list:10:asc:tags:events-in-regions}-->
+                {$newslist:events list:asc:10:pgr}
             </ul>
         </article>
     </main>
